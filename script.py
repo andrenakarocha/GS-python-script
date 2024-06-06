@@ -28,13 +28,15 @@ def adicionar_dados (lista_datas, lista_pH, lista_temperatura):
     lista_temperatura.append(temperatura)
 
 def analisar_dados (lista_datas, lista_pH, lista_temperatura):
-    data = input('Qual a data registrada dos dados que deseja analisar? ')
+    data = input('Qual a data registrada dos dados que deseja analisar? (dd/mm)')
     indexDados = 0
     for i in range(len(lista_datas)):
         if data == lista_datas[i]:
             indexDados = i
         else:
             print('Digite uma data válida!')
+            data = input('Qual a data registrada dos dados que deseja analisar? (dd/mm)')
+
 
     print('Dados analisados! Segue o resultado: ')
 
